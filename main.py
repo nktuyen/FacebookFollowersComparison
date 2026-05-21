@@ -149,7 +149,8 @@ if __name__=="__main__":
             if name not in followers_map2:
                 index += 1
                 if index >= start_index:
-                    report_file.write(f"<tr><td style='border-top:solid 1px gray;color:red;'>{index}</td><td style='border-top:solid 1px gray;;border-left:solid 1px gray;color:red;'>{name}</td><td style='border-top:solid 1px gray;border-left:solid 1px gray;color:red;'>")
+                    report_file.write(f"<tr><td style='border-top:solid 1px gray;color:red;'>{index}</td><td style='border-top:solid 1px gray;;border-left:solid 1px gray;color:red;' onclick='javascript:navigator.clipboard.writeText(this.innerText);this.style.backgroundColor=`yellow`;'>{name}</td><td style='border-top:solid 1px gray;border-left:solid 1px gray;color:red;'>")
+                    #report_file.write(f"<input type='button' style='cursor:pointer;' value='copy' onclick='javascript:navigator.clipboard.writeText(`{name}`)' />");
                     report_file.write("</td></tr>")
         report_file.write("</table></body></html>")
     
