@@ -133,7 +133,7 @@ if __name__=="__main__":
             start_index = 1
 
     with open(out_file, 'w', encoding='utf-8') as report_file:
-        report_file.write("<html><heade><title>Report</title></head><body><table style='border:solid 1px gray;'><caption><h1>Report</h1></caption><tr><th>#</th><th>Who you're followed</th><th>Did he/she follow you?</th></tr>")
+        report_file.write("<html><heade><title>Report</title></head><body><table style='border:solid 1px gray;'><caption><h1>Report</h1></caption><tr><th>#</th><th style='border-left:solid 1px gray;'>Name</th><th style='border-left:solid 1px gray;'>Remark</th></tr>")
         if verbose:
             for _, name in enumerate(followers_map1, 1):
                 if name in followers_map2:
